@@ -82,6 +82,10 @@ Breaking work into milestones prevents cramming and allows for iterative testing
 3. **Break work into milestones** - Small, testable increments beat big-bang releases
 4. **Security from the start** - Don't add authentication as an afterthought
 
+### HW2 Completion: OOP and Software Design Principles
+
+This week I also completed HW2, which focused on object-oriented programming concepts and software design principles. The assignment reinforced key principles like encapsulation, inheritance, polymorphism, and abstraction all of which are essential for building maintainable and scalable software systems. Understanding these OOP fundamentals directly supports the quality software goals outlined in this project, as proper object design leads to more organized, reusable, and testable code.
+
 ---
 
 ## Week 2: [To be added]
