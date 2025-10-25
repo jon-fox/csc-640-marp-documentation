@@ -88,6 +88,18 @@ This week I also completed HW2, which focused on object-oriented programming con
 
 ---
 
-## Week 2: [To be added]
+## Week 2: Framework Preparation and Stage 2 Planning (October 25-31, 2025)
+
+### Preparing for Laravel and Deployment
+
+This week focused on understanding the technology stack for Stage 2 and ensuring all tools were properly configured. I reviewed Module 2 materials covering Laravel and ORM patterns, and Module 3 materials on Docker, Hugo, and GitHub Pages. Understanding these frameworks upfront prevents architectural problems during implementation.
+
+I installed and configured the Laravel development environment including PHP, MySQL, and Composer. Running the provided REST API test scripts from the course materials confirmed all components work together correctly. Creating a test Laravel project verified the setup was production-ready before beginning actual development work.
+
+**Quality Principle Applied:** Testing tools through example projects catches integration issues early. Understanding both the backend framework and deployment infrastructure together prevents costly refactoring when moving from development to production.
+
+---
+
+## Week 3: [To be added]
 
 ---
