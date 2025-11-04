@@ -131,6 +131,15 @@ Following Milestone 1 from the project plan, I implemented the database schema f
 
 ---
 
-## Week 3: [To be added]
+## Week 3: Homework 3 Completion (November 1-7, 2025)
+
+### HW3 Completion Summary
+
+**Homework 3 (Complete):**
+- Assignment completed and uploaded
+
+---
+
+## Week 4: [To be added]
 
 ---
