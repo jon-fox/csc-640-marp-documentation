@@ -148,6 +148,14 @@ No new work this week - assignments completed ahead of schedule in previous week
 
 ---
 
-## Week 5: [To be added]
+## Week 5: Stage 2 Submitted, Documentation Focus (November 15-21, 2025)
+
+### HMW4 Stage 2 Submission
+
+HMW4 Stage 2 has been completed and submitted. The submission included the Laravel migration of the REST API project with all 14 endpoints, Docker containerization, and comprehensive testing documentation.
+
+### Focus Shift to Marp Documentation
+
+With the major project milestone complete, focus is now shifting to finalizing the Marp documentation for CSC 640. This documentation captures the quality software principles demonstrated throughout the semester and serves as a comprehensive guide for building maintainable, scalable systems.
 
 ---
