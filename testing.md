@@ -55,4 +55,4 @@ Directly queried the database to verify foreign keys work, cascading deletes hap
 
 Writing tests for Stage 1 revealed auth bugs I completely missed during development. The test scripts forced me to think about what behavior I actually expected. Having automated tests made the Laravel migration way less scary because I could confirm everything still worked.
 
-> Tests aren't optional if you care about quality.
+Tests aren't optional if you care about quality.
