@@ -60,4 +60,4 @@ But for most projects, you'll ship features faster and maintain code easier. Tha
 
 Migrating from raw PHP to Laravel cut the codebase by 40% while adding features. Authentication bugs from Stage 1 vanished because Laravel's auth is battle-tested. Adding a new endpoint went from 30 minutes to 5 minutes.
 
-> That's the whole point of quality software. Frameworks handle the mundane stuff correctly so you can focus on building actual value.
+That's the whole point of quality software. Frameworks handle the mundane stuff correctly so you can focus on building actual value.

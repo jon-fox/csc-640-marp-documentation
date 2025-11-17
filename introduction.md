@@ -28,4 +28,4 @@ Teams working with quality codebases ship faster because they're building featur
 
 One SQL injection bug can expose millions of records. Missing documentation means every new developer has to reverse-engineer your API. Skipping tests means production breaks and users lose trust.
 
-> These aren't hypothetical problems. They happen constantly to teams that don't prioritize quality.
+These aren't hypothetical problems. They happen constantly to teams that don't prioritize quality.

@@ -40,4 +40,4 @@ Database queries belong in models. Business logic goes in controllers. Display l
 
 Check for errors early and return clear messages. Don't let invalid data propagate through your system and cause cryptic failures later.
 
-> HW4 validates required fields immediately. Missing a parameter returns "400 Bad Request" right away, not a confusing database error.
+HW4 validates required fields immediately. Missing a parameter returns "400 Bad Request" right away, not a confusing database error.
