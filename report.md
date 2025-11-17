@@ -154,8 +154,18 @@ No new work this week - assignments completed ahead of schedule in previous week
 
 HMW4 Stage 2 has been completed and submitted. The submission included the Laravel migration of the REST API project with all 14 endpoints, Docker containerization, and comprehensive testing documentation.
 
+### HMW4 Part 3 Improvements
+
+Updated HMW4 Part 3 with a better run and improved README documentation. Iterating on submitted work to improve clarity and usability demonstrates commitment to quality beyond just meeting requirements. Enhanced documentation helps future users understand setup and deployment processes more effectively.
+
+**Quality Principle Applied:** Good software is never truly finished - there's always room for improvement. Refining documentation and deployment scripts after initial submission shows professional attention to detail and user experience.
+
 ### Focus Shift to Marp Documentation
 
 With the major project milestone complete, focus is now shifting to finalizing the Marp documentation for CSC 640. This documentation captures the quality software principles demonstrated throughout the semester and serves as a comprehensive guide for building maintainable, scalable systems.
+
+### Maintaining Living Documentation
+
+Updated this report.md file to reflect current project status and weekly progress. Quality documentation is a living artifact that evolves alongside the project - keeping it current ensures it remains valuable for team members and stakeholders.
 
 ---
