@@ -1,43 +1,84 @@
-# Quality Software Principles
+# General Principles
 
-## SOLID Principles
-
-**Single Responsibility** - A class should do one thing well. Don't build god classes that handle everything.
-
-**Open/Closed** - You should be able to add features without rewriting existing code.
-
-**Liskov Substitution** - If you swap a subclass for its parent class, things shouldn't break.
-
-**Interface Segregation** - Don't force classes to implement methods they'll never use.
-
-**Dependency Inversion** - Depend on abstractions, not concrete implementations. High-level code shouldn't care about low-level details.
+Some general principles I follow up
 
 ---
 
-### DRY (Don't Repeat Yourself)
+## Fail Fast
 
-Copy-pasted code means you have to fix the same bug in five different places. When you see the same logic twice, pull it into a function.
+It's important to not over analyze everything and get to writing code. I do believe architecting solutions is a good pre requisite, but am also cautious of over architecting.
 
-*In HW4, database connection logic lives in one spot. Change the connection string once, everything updates.*
+Often times when architecting there is a gap between the high level overview and the actual implementation limitations that are learned during development.
 
-### KISS (Keep It Simple)
+---
 
-Clever code is hard to debug. Simple code is obvious. Future you will thank present you for writing boring, readable code.
+## Don't Repeat Yourself
 
-### YAGNI (You Aren't Gonna Need It)
+This one is pretty cliche these days, but I think its a useful thing to keep in mind when writing software.
 
-Don't build features for hypothetical future requirements. Build what you need right now, and build it properly.
+It's important to reuse functionality. This way it can be extended and maintained in one place.
 
 ---
 
 ## Separation of Concerns
 
-Database queries belong in models. Business logic goes in controllers. Display logic stays in views. Mixing these together creates unmaintainable spaghetti.
+Microservicing can be a good approach but there is definitely a spectrum. Over microservicing has its own problems with maintenance of many separate services along with their deployments. While massive monoliths can be difficult to maintain for reasons in the inverse.
 
-*In HW4, authentication happens in middleware, not scattered across every endpoint. Each piece of code has a clear job.*
+Authentication scattered across 14 endpoint files means updating auth touches 14 files. Authentication in middleware means one place, one change.
 
-## Fail Fast
+If changing the database requires touching API route handlers, your concerns aren't separated. Good separation means swapping the database only touches the database layer.
 
-Check for errors early and return clear messages. Don't let invalid data propagate through your system and cause cryptic failures later.
+Finding the right balance whether microservices vs monolith or code organization depends on team size and complexity. Start simple and split when you need to.
 
-HW4 validates required fields immediately. Missing a parameter returns "400 Bad Request" right away, not a confusing database error.
+---
+
+## Environment Isolation
+
+Dev, staging, and prod should be as similar as possible but completely isolated.
+
+All of the environmental differences we have should be configurable. So we have ymls or the equivalent that contain the configs we need for separate environments.
+
+In the case of cloud environments we can store the configurations in the cloud environment and pull from there during run/build time. 
+
+---
+
+## Automate Repetitive Tasks
+
+If it becomes a repetitive task then we should automate it, like homework 4.
+
+**Manual process:**
+- SSH into server
+- Pull latest code
+- Run migrations
+- Restart service
+- Check logs
+
+**Scripted:**
+```bash
+./deploy.sh staging
+```
+
+This way we can kick off the script whenever we make changes or deploy, and can mostly be assured that the behaviour is the same.
+
+---
+
+## Iterate and optimize over time
+
+This is a big one for me. Don't try to solve every problem at the outset or over optimize.
+
+First we need to actually develop and deploy an MVP like application. From there we can iterate and optimize based on user feedback and metrics.
+
+It's important to collect good metrics like API calls, CPU usage, etc. From there we have a benchmark to compare iterations against.
+
+---
+
+## Keep It Simple
+
+Probably one of the most important to me.
+
+High complexity becomes so difficult to maintain and iterate on. It also becomes difficult for other developers to understand and maintain later.
+
+Developing low complexity applications can actually be difficult. I've found this especially true with AI. AI so often wants to implement the most complex solution possible. Understanding code and what you are doing helps immensely when guiding AI solutions.
+
+---
+
