@@ -29,3 +29,14 @@ Teams working with quality codebases ship faster because they're building featur
 One SQL injection bug can expose millions of records. Missing documentation means every new developer has to reverse-engineer your API. Skipping tests means production breaks and users lose trust.
 
 These aren't hypothetical problems. They happen constantly to teams that don't prioritize quality.
+
+---
+
+## HW4 Project Example
+
+Throughout this documentation, I use the [REST API PHP Server Project](https://github.com/jon-fox/rest-api-php-server-project) as a concrete example. This AI Agent Management API demonstrates quality principles through two implementations:
+
+- **Stage 1:** Raw PHP revealed the complexity and security challenges of manual implementation
+- **Stage 2:** Laravel migration showed how frameworks enforce quality practices and reduce errors
+
+The project proves these concepts work in practice, not just theory.

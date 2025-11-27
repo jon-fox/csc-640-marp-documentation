@@ -10,9 +10,9 @@ Manual testing catches obvious problems. Automated tests catch edge cases. Regre
 
 ## Cost of Bugs by Stage
 
-- Find it while coding: Fix it immediately, 1x cost
-- Find it during QA: Someone files a ticket, you context-switch back, 10x cost
-- Find it in production: Users affected, emergency fix, reputation hit, 100x cost
+- Find it while coding: Fix it immediately, minimal cost
+- Find it during QA: Someone files a ticket, you context-switch back, big cost
+- Find it in production: Users affected, emergency fix, reputation hit, max cost
 
 > Testing shifts bug discovery earlier, which saves exponential time and money.
 
