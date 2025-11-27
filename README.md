@@ -8,28 +8,28 @@ Documentation on building maintainable, secure, and scalable software. Created f
 
 | Directory | Purpose |
 |-----------|---------|
-| [content/](content/) | Source markdown files |
+| [report/](report/) | Quality software documentation (markdown files) |
 | [presentation/](presentation/) | Generated Marp presentation |
-| [report/](report/) | Weekly progress log |
+| [work_logs/](work_logs/) | Weekly activity logs |
 | [scripts/](scripts/) | Build script for presentation |
 
 ---
 
-## Content Files
+## Report Files
 
 | File | Purpose |
 |------|---------|
-| [introduction.md](content/introduction.md) | What quality software is |
-| [principles.md](content/principles.md) | Fail fast, DRY, separation of concerns, environment isolation, automation |
-| [frameworks.md](content/frameworks.md) | FastAPI, OpenAI SDK, FastMCP examples |
-| [testing.md](content/testing.md) | Testing approaches and principles |
-| [documentation.md](content/documentation.md) | Documentation standards and practices |
+| [introduction.md](report/introduction.md) | What quality software is |
+| [principles.md](report/principles.md) | Fail fast, DRY, separation of concerns, environment isolation, automation |
+| [frameworks.md](report/frameworks.md) | FastAPI, OpenAI SDK, FastMCP examples |
+| [testing.md](report/testing.md) | Testing approaches and principles |
+| [documentation.md](report/documentation.md) | Documentation standards and practices |
 
 ---
 
 ## Building Presentation
 
-Run `./scripts/build_presentation.sh` to generate presentation/presentation.md from content files.
+Run `./scripts/build_presentation.sh` to generate presentation/presentation.md from report files.
 
 ---
 

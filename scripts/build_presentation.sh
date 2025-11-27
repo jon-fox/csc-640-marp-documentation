@@ -22,14 +22,14 @@ style: |
 
 EOF
 
-cat content/introduction.md >> presentation/presentation.md
+cat report/introduction.md >> presentation/presentation.md
 echo "" >> presentation/presentation.md
-cat content/principles.md >> presentation/presentation.md
+cat report/principles.md >> presentation/presentation.md
 echo "" >> presentation/presentation.md
-cat content/frameworks.md >> presentation/presentation.md
+cat report/frameworks.md >> presentation/presentation.md
 echo "" >> presentation/presentation.md
-cat content/testing.md >> presentation/presentation.md
+cat report/testing.md >> presentation/presentation.md
 echo "" >> presentation/presentation.md
-cat content/documentation.md >> presentation/presentation.md
+cat report/documentation.md >> presentation/presentation.md
 
 echo "presentation/presentation.md generated"

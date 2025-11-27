@@ -15,6 +15,14 @@ style: |
     flex-direction: column;
     justify-content: flex-start;
   }
+
+---
+
+# Quality Software Documentation
+**Author:** Jon Fox  
+**Course:** CSC 640  
+**Semester:** Fall 2025
+
 ---
 
 # Quality Software
