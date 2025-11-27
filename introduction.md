@@ -1,42 +1,21 @@
-# What is Quality Software?
+# Quality Software
 
-Quality software works correctly, stays maintainable over time, and doesn't create headaches for the people who have to work with it.
+Quality software isn't exactly something I lose sleep over until I'm actually reviewing a PR or working with poorly designed software.
 
----
+Security matters. Is the input being validated? Is auth actually protecting sensitive operations?
 
-### Core Attributes
+Simplicity is huge. High complexity becomes impossible to maintain. Simple implementations are often the most effective for future extension and iteration.
 
-**Maintainable** - Other developers can read your code and understand what's happening. Changes don't break everything.
-
-**Reliable** - The software does what it's supposed to do, consistently. Errors get handled instead of crashing.
-
-**Secure** - Authentication protects sensitive operations. User data doesn't leak because someone forgot to validate input.
-
-**Scalable** - Growing from 100 users to 10,000 users doesn't require rebuilding from scratch.
-
-**Well-documented** - Someone new to the project can actually get it running without hunting you down for answers.
+Documentation saves time. Can someone new actually get this running without external assistance.
 
 ---
 
-## Why Quality Matters
+## This Documentation
 
-Finding a bug in production costs about 100 times more than catching it during development. Every shortcut you take today becomes technical debt that slows you down later.
+Throughout this documentation I use the [REST API PHP Server Project](https://github.com/jon-fox/rest-api-php-server-project) as an example along with other callouts from previous frameworks and docs I've written.
 
-Teams working with quality codebases ship faster because they're building features instead of fixing bugs.
-
-### Real-World Impact
-
-One SQL injection bug can expose millions of records. Missing documentation means every new developer has to reverse-engineer your API. Skipping tests means production breaks and users lose trust.
-
-These aren't hypothetical problems. They happen constantly to teams that don't prioritize quality.
-
----
-
-## HW4 Project Example
-
-Throughout this documentation, I use the [REST API PHP Server Project](https://github.com/jon-fox/rest-api-php-server-project) as a concrete example. This AI Agent Management API demonstrates quality principles through two implementations:
-
-- **Stage 1:** Raw PHP revealed the complexity and security challenges of manual implementation
-- **Stage 2:** Laravel migration showed how frameworks enforce quality practices and reduce errors
-
-The project proves these concepts work in practice, not just theory.
+- **Documentation.md** - Documentation standards and practices
+- **Frameworks.md** - Power of frameworks with examples
+- **Principles.md** - General principles from experience
+- **Testing.md** - Testing principles and approaches
+- **Report.md** - Weekly activities from semester work
