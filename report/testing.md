@@ -10,7 +10,6 @@ Automated tests catch edge cases and errors after code changes.
 
 Integration tests are great and ensure that the entire app works end-to-end as expected. These can be integrated into your CICD pipelines to ensure apps function as expected prior to deploying.
 
----
 
 ## Cost of Bugs
 
@@ -20,7 +19,6 @@ Integration tests are great and ensure that the entire app works end-to-end as e
 
 > Testing can prevent bugs from reaching produciton. Although it won't catch every edge case or environmental difference, it provides a good line of defense against bugs be introduced during initial deployment or further iterations.
 
----
 
 ## Testing Approaches in my HW4
 
@@ -47,7 +45,24 @@ The infra cost of completely replicating PROD in lower environments can also be 
 
 All of that being said, ensuring data integrity, data quality, and testing apps integration is important. Ensuring that when the application is running in PROD that it isn't encountering unforeseen table locking, read/write issues is important, and can be tested for in the lower envs.
 
----
+
+## Testing Implementation Timeline
+
+### Week 2: Building the Test Suite
+
+Following Milestone 2 from the project plan, I completed the testing infrastructure:
+
+**Stage 1 REST API Testing Suite (Complete):**
+- Testing suite: cURL script (test_api.sh) + browser suite (test.html)
+- NGINX deployment with automated start/stop scripts and self-contained config
+- All 14 REST API endpoints (7 public GET, 7 protected with bearer tokens)
+- PHP + MySQL backend with PDO, bearer token authentication
+- 5 database tables (agents, tasks, tools, logs, api_tokens)
+
+This testing suite referenced throughout the sections above wasn't hypothetical - I built it in Week 2 and used it continuously throughout development. Building comprehensive tests early meant every subsequent code change was validated immediately, catching regressions before they became problems.
+
+The test_api.sh script became both a testing tool and API documentation through examples, demonstrating the dual value of well-designed tests.
+
 
 ### What Good Tests Cover
 
@@ -61,4 +76,3 @@ All of that being said, ensuring data integrity, data quality, and testing apps 
 
 **Breaking Changes** - arguably the most important to me. Breaking changes being caught before being deployed to production is a big saver of time and prod issues.
 
----

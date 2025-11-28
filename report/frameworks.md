@@ -8,7 +8,6 @@ Frameworks solve common problems so we don't have to. Security, validation, rout
 
 Frameworks are great for enterprise applications that need security, validation, auth, etc.
 
----
 
 ## FastAPI - Python Web Framework
 
@@ -36,7 +35,6 @@ async def create_agent(agent: Agent):
 - Async support for concurrent requests
 - Clear validation errors as JSON
 
----
 
 ## OpenAI Python SDK - Client Library Design
 
@@ -61,7 +59,6 @@ response = client.chat.completions.create(
 
 This framework is everywhere and can be used with many models outside of openai's own.
 
----
 
 ## FastMCP - MCP Server Framework
 
@@ -83,7 +80,6 @@ def search_records(query: str, limit: int = 10) -> str:
 
 This framework is awesome for standing up and building an mcp server.
 
----
 
 ## Why Frameworks are Important
 
@@ -99,7 +95,6 @@ This framework is awesome for standing up and building an mcp server.
 
 **Velocity:** Ship features faster. Less boilerplate means more time on unique business logic.
 
----
 
 ## Real-World Impact
 

@@ -1,22 +1,12 @@
-# Quality Software Documentation
-
-**Author:** Jon Fox
-**Course:** CSC 640
-**Semester:** Fall 2025
-
----
-
 # Quality Software
 
-Quality software isn't exactly something I lose sleep over until I'm actually reviewing a PR or working with poorly designed software.
+This report documents my understanding of quality software developed throughout the Fall 2025 semester. Quality software became tangible when reviewing code or working with poorly designed systems during project development.
 
-Security matters. Is the input being validated? Is auth actually protecting sensitive operations?
+Throughout this semester's work, security emerged as a critical consideration. Input validation and authentication protecting sensitive operations became essential priorities when building projects, where improper validation could expose vulnerabilities.
 
-Simplicity is huge. High complexity becomes impossible to maintain. Simple implementations are often the most effective for future extension and iteration.
+Simplicity proved vital for maintainability during iterative development. High complexity made systems difficult to extend during later project phases. Simple implementations enabled more effective iteration and future team collaboration across codebases.
 
-Documentation saves time. Can someone new actually get this running without external assistance.
-
----
+Documentation's value became clear when returning to earlier work or enabling others to use projects. Systems that new team members could run without external assistance demonstrated quality documentation, reducing friction and enabling efficient collaboration.
 
 ## This Documentation
 
@@ -32,7 +22,6 @@ Throughout this documentation I use the [REST API PHP Server Project](https://gi
 
 Some general principles I follow up
 
----
 
 ## Fail Fast
 
@@ -40,7 +29,6 @@ It's important to not over analyze everything and get to writing code. I do beli
 
 Often times when architecting there is a gap between the high level overview and the actual implementation limitations that are learned during development.
 
----
 
 ## Don't Repeat Yourself
 
@@ -48,7 +36,6 @@ This one is pretty cliche these days, but I think its a useful thing to keep in 
 
 It's important to reuse functionality. This way it can be extended and maintained in one place.
 
----
 
 ## Separation of Concerns
 
@@ -60,7 +47,6 @@ If changing the database requires touching API route handlers, your concerns are
 
 Finding the right balance whether microservices vs monolith or code organization depends on team size and complexity. Start simple and split when you need to.
 
----
 
 ## Environment Isolation
 
@@ -70,7 +56,6 @@ All of the environmental differences we have should be configurable. So we have 
 
 In the case of cloud environments we can store the configurations in the cloud environment and pull from there during run/build time. 
 
----
 
 ## Automate Repetitive Tasks
 
@@ -90,7 +75,6 @@ If it becomes a repetitive task then we should automate it, like homework 4.
 
 This way we can kick off the script whenever we make changes or deploy, and can mostly be assured that the behaviour is the same.
 
----
 
 ## Iterate and optimize over time
 
@@ -100,7 +84,6 @@ First we need to actually develop and deploy an MVP like application. From there
 
 It's important to collect good metrics like API calls, CPU usage, etc. From there we have a benchmark to compare iterations against.
 
----
 
 ## Keep It Simple
 
@@ -110,7 +93,6 @@ High complexity becomes so difficult to maintain and iterate on. It also becomes
 
 Developing low complexity applications can actually be difficult. I've found this especially true with AI. AI so often wants to implement the most complex solution possible. Understanding code and what you are doing helps immensely when guiding AI solutions.
 
----
 
 
 # The Power of Frameworks
@@ -123,7 +105,6 @@ Frameworks solve common problems so we don't have to. Security, validation, rout
 
 Frameworks are great for enterprise applications that need security, validation, auth, etc.
 
----
 
 ## FastAPI - Python Web Framework
 
@@ -151,7 +132,6 @@ async def create_agent(agent: Agent):
 - Async support for concurrent requests
 - Clear validation errors as JSON
 
----
 
 ## OpenAI Python SDK - Client Library Design
 
@@ -176,7 +156,6 @@ response = client.chat.completions.create(
 
 This framework is everywhere and can be used with many models outside of openai's own.
 
----
 
 ## FastMCP - MCP Server Framework
 
@@ -198,7 +177,6 @@ def search_records(query: str, limit: int = 10) -> str:
 
 This framework is awesome for standing up and building an mcp server.
 
----
 
 ## Why Frameworks are Important
 
@@ -214,7 +192,6 @@ This framework is awesome for standing up and building an mcp server.
 
 **Velocity:** Ship features faster. Less boilerplate means more time on unique business logic.
 
----
 
 ## Real-World Impact
 
@@ -237,7 +214,6 @@ Automated tests catch edge cases and errors after code changes.
 
 Integration tests are great and ensure that the entire app works end-to-end as expected. These can be integrated into your CICD pipelines to ensure apps function as expected prior to deploying.
 
----
 
 ## Cost of Bugs
 
@@ -247,7 +223,6 @@ Integration tests are great and ensure that the entire app works end-to-end as e
 
 > Testing can prevent bugs from reaching produciton. Although it won't catch every edge case or environmental difference, it provides a good line of defense against bugs be introduced during initial deployment or further iterations.
 
----
 
 ## Testing Approaches in my HW4
 
@@ -274,7 +249,24 @@ The infra cost of completely replicating PROD in lower environments can also be 
 
 All of that being said, ensuring data integrity, data quality, and testing apps integration is important. Ensuring that when the application is running in PROD that it isn't encountering unforeseen table locking, read/write issues is important, and can be tested for in the lower envs.
 
----
+
+## Testing Implementation Timeline
+
+### Week 2: Building the Test Suite
+
+Following Milestone 2 from the project plan, I completed the testing infrastructure:
+
+**Stage 1 REST API Testing Suite (Complete):**
+- Testing suite: cURL script (test_api.sh) + browser suite (test.html)
+- NGINX deployment with automated start/stop scripts and self-contained config
+- All 14 REST API endpoints (7 public GET, 7 protected with bearer tokens)
+- PHP + MySQL backend with PDO, bearer token authentication
+- 5 database tables (agents, tasks, tools, logs, api_tokens)
+
+This testing suite referenced throughout the sections above wasn't hypothetical - I built it in Week 2 and used it continuously throughout development. Building comprehensive tests early meant every subsequent code change was validated immediately, catching regressions before they became problems.
+
+The test_api.sh script became both a testing tool and API documentation through examples, demonstrating the dual value of well-designed tests.
+
 
 ### What Good Tests Cover
 
@@ -288,7 +280,6 @@ All of that being said, ensuring data integrity, data quality, and testing apps 
 
 **Breaking Changes** - arguably the most important to me. Breaking changes being caught before being deployed to production is a big saver of time and prod issues.
 
----
 
 # Documentation
 
@@ -306,7 +297,6 @@ Here is an example of something I've published to be publically available (can't
 
 [Example Documentation Published to Medium](https://medium.com/aws-tip/aws-sso-setup-with-organizations-for-terraform-cli-assumable-roles-922348c015bb)
 
----
 
 ### Documentation as Code
 
@@ -343,3 +333,28 @@ I follow the wants I listed above. I make sure to include Step by Step instructi
 The best time to write docs is right after the implementation I find. So after its fresh in my memory I'll walk through each piece, take screenshots, and include each step.
 
 Being too verbose is FAR BETTER than skipping over steps and leaving the person using your docs wondering how you got from A -> B.
+
+
+## Documentation Evolution This Semester
+
+### Week 2: Initial Documentation
+
+**Documentation Created (Complete):**
+- Marp presentation with 30+ slides, endpoint documentation, and screenshots
+- PDF export with embedded images
+- README with quick-start guide, .env setup, NGINX/PHP usage, and testing instructions
+- Code backup created (code-backup.zip)
+
+Starting with comprehensive documentation from the beginning meant the project was accessible to others immediately, not as an afterthought.
+
+### Week 5: Living Documentation Practice
+
+With the major project milestone complete, focus shifted to finalizing the Marp documentation for CSC 640. This documentation captures the quality software principles demonstrated throughout the semester and serves as a comprehensive guide for building maintainable, scalable systems.
+
+Updated report files to reflect current project status and weekly progress. Quality documentation is a living artifact that evolves alongside the project - keeping it current ensures it remains valuable for team members and stakeholders.
+
+### Week 6: Refinement and Voice
+
+Updated and refined quality software documentation for HMW5. Rewrote introduction, principles, frameworks, testing, and documentation files with authentic voice and practical examples. Replaced textbook SOLID principles with real-world principles from experience. Switched from Laravel-specific examples to modern frameworks (FastAPI, OpenAI SDK, FastMCP). Added enterprise database testing insights. Condensed README and removed redundant content. Documentation now reflects professional experience rather than generic CS theory.
+
+**Reflection:** This documentation itself demonstrates the principles I outlined above. Started comprehensive (Week 2), maintained regularly (Week 5), refined iteratively (Week 6). Documentation is never "done" - it evolves with understanding and remains a living guide for current and future team members.

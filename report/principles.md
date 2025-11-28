@@ -2,7 +2,6 @@
 
 Some general principles I follow up
 
----
 
 ## Fail Fast
 
@@ -10,7 +9,6 @@ It's important to not over analyze everything and get to writing code. I do beli
 
 Often times when architecting there is a gap between the high level overview and the actual implementation limitations that are learned during development.
 
----
 
 ## Don't Repeat Yourself
 
@@ -18,7 +16,6 @@ This one is pretty cliche these days, but I think its a useful thing to keep in 
 
 It's important to reuse functionality. This way it can be extended and maintained in one place.
 
----
 
 ## Separation of Concerns
 
@@ -30,7 +27,6 @@ If changing the database requires touching API route handlers, your concerns are
 
 Finding the right balance whether microservices vs monolith or code organization depends on team size and complexity. Start simple and split when you need to.
 
----
 
 ## Environment Isolation
 
@@ -40,7 +36,6 @@ All of the environmental differences we have should be configurable. So we have 
 
 In the case of cloud environments we can store the configurations in the cloud environment and pull from there during run/build time. 
 
----
 
 ## Automate Repetitive Tasks
 
@@ -60,7 +55,6 @@ If it becomes a repetitive task then we should automate it, like homework 4.
 
 This way we can kick off the script whenever we make changes or deploy, and can mostly be assured that the behaviour is the same.
 
----
 
 ## Iterate and optimize over time
 
@@ -70,7 +64,6 @@ First we need to actually develop and deploy an MVP like application. From there
 
 It's important to collect good metrics like API calls, CPU usage, etc. From there we have a benchmark to compare iterations against.
 
----
 
 ## Keep It Simple
 
@@ -80,5 +73,4 @@ High complexity becomes so difficult to maintain and iterate on. It also becomes
 
 Developing low complexity applications can actually be difficult. I've found this especially true with AI. AI so often wants to implement the most complex solution possible. Understanding code and what you are doing helps immensely when guiding AI solutions.
 
----
 

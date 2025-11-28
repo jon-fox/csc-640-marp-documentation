@@ -14,7 +14,6 @@ Here is an example of something I've published to be publically available (can't
 
 [Example Documentation Published to Medium](https://medium.com/aws-tip/aws-sso-setup-with-organizations-for-terraform-cli-assumable-roles-922348c015bb)
 
----
 
 ### Documentation as Code
 
@@ -51,3 +50,28 @@ I follow the wants I listed above. I make sure to include Step by Step instructi
 The best time to write docs is right after the implementation I find. So after its fresh in my memory I'll walk through each piece, take screenshots, and include each step.
 
 Being too verbose is FAR BETTER than skipping over steps and leaving the person using your docs wondering how you got from A -> B.
+
+
+## Documentation Evolution This Semester
+
+### Week 2: Initial Documentation
+
+**Documentation Created (Complete):**
+- Marp presentation with 30+ slides, endpoint documentation, and screenshots
+- PDF export with embedded images
+- README with quick-start guide, .env setup, NGINX/PHP usage, and testing instructions
+- Code backup created (code-backup.zip)
+
+Starting with comprehensive documentation from the beginning meant the project was accessible to others immediately, not as an afterthought.
+
+### Week 5: Living Documentation Practice
+
+With the major project milestone complete, focus shifted to finalizing the Marp documentation for CSC 640. This documentation captures the quality software principles demonstrated throughout the semester and serves as a comprehensive guide for building maintainable, scalable systems.
+
+Updated report files to reflect current project status and weekly progress. Quality documentation is a living artifact that evolves alongside the project - keeping it current ensures it remains valuable for team members and stakeholders.
+
+### Week 6: Refinement and Voice
+
+Updated and refined quality software documentation for HMW5. Rewrote introduction, principles, frameworks, testing, and documentation files with authentic voice and practical examples. Replaced textbook SOLID principles with real-world principles from experience. Switched from Laravel-specific examples to modern frameworks (FastAPI, OpenAI SDK, FastMCP). Added enterprise database testing insights. Condensed README and removed redundant content. Documentation now reflects professional experience rather than generic CS theory.
+
+**Reflection:** This documentation itself demonstrates the principles I outlined above. Started comprehensive (Week 2), maintained regularly (Week 5), refined iteratively (Week 6). Documentation is never "done" - it evolves with understanding and remains a living guide for current and future team members.

@@ -1,14 +1,12 @@
 # Quality Software
 
-Quality software isn't exactly something I lose sleep over until I'm actually reviewing a PR or working with poorly designed software.
+This report documents my understanding of quality software developed throughout the Fall 2025 semester. Quality software became tangible when reviewing code or working with poorly designed systems during project development.
 
-Security matters. Is the input being validated? Is auth actually protecting sensitive operations?
+Throughout this semester's work, security emerged as a critical consideration. Input validation and authentication protecting sensitive operations became essential priorities when building projects, where improper validation could expose vulnerabilities.
 
-Simplicity is huge. High complexity becomes impossible to maintain. Simple implementations are often the most effective for future extension and iteration.
+Simplicity proved vital for maintainability during iterative development. High complexity made systems difficult to extend during later project phases. Simple implementations enabled more effective iteration and future team collaboration across codebases.
 
-Documentation saves time. Can someone new actually get this running without external assistance.
-
----
+Documentation's value became clear when returning to earlier work or enabling others to use projects. Systems that new team members could run without external assistance demonstrated quality documentation, reducing friction and enabling efficient collaboration.
 
 ## This Documentation
 
