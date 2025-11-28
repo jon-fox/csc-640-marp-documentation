@@ -1,35 +1,20 @@
 #!/bin/bash
 
-cat > presentation/presentation.md << 'EOF'
----
-marp: true
-theme: default
-paginate: true
-style: |
-  section h1 {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    right: 50px;
-  }
-  section {
-    padding-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
----
+set -euo pipefail
 
-EOF
+PRESENTATION_MD="presentation/presentation.md"
 
-cat report/introduction.md >> presentation/presentation.md
-echo "" >> presentation/presentation.md
-cat report/principles.md >> presentation/presentation.md
-echo "" >> presentation/presentation.md
-cat report/frameworks.md >> presentation/presentation.md
-echo "" >> presentation/presentation.md
-cat report/testing.md >> presentation/presentation.md
-echo "" >> presentation/presentation.md
-cat report/documentation.md >> presentation/presentation.md
+if [ ! -f "$PRESENTATION_MD" ]; then
+  echo "Error: $PRESENTATION_MD not found. Create it first and re-run this script." >&2
+  exit 1
+fi
 
-echo "presentation/presentation.md generated"
+echo "Using existing $PRESENTATION_MD"
+
+if command -v npx >/dev/null 2>&1; then
+  echo "Found npx — attempting to build PDF with @marp-team/marp-cli (this may install packages)."
+  npx --yes @marp-team/marp-cli "$PRESENTATION_MD" --pdf --allow-local-files
+  echo "PDF build attempted (check output above for success)."
+else
+  echo "npx not found — presentation markdown left intact. Install @marp-team/marp-cli to export PDF."
+fi

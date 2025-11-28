@@ -1,8 +1,10 @@
 # Quality Software Documentation
 
-**Author:** Jon Fox  
-**Course:** CSC 640  
+**Author:** Jon Fox
+**Course:** CSC 640
 **Semester:** Fall 2025
+
+---
 
 # Quality Software
 
@@ -14,20 +16,23 @@ Simplicity is huge. High complexity becomes impossible to maintain. Simple imple
 
 Documentation saves time. Can someone new actually get this running without external assistance.
 
+---
 
 ## This Documentation
 
-Throughout this documentation I use the [REST API PHP Server Project](https://github.com/jon-fox/rest-api-php-server-project) as an example along with other callouts from previous frameworks and docs I've written.
+Throughout this documentation I use the [REST API PHP Server Project](https://github.com/jon-fox/rest-api-php-server-project) as an example along with other callouts from previous frameworks and docs I've written. [Example Documentation Published to Medium](https://medium.com/aws-tip/aws-sso-setup-with-organizations-for-terraform-cli-assumable-roles-922348c015bb). This [Graduate MCP smart hub research project](https://github.com/jon-fox/raspberry-mcp).
 
 - **Documentation.md** - Documentation standards and practices
 - **Frameworks.md** - Power of frameworks with examples
 - **Principles.md** - General principles from experience
 - **Testing.md** - Testing principles and approaches
 - **Report.md** - Weekly activities from semester work
+
 # General Principles
 
 Some general principles I follow up
 
+---
 
 ## Fail Fast
 
@@ -35,6 +40,7 @@ It's important to not over analyze everything and get to writing code. I do beli
 
 Often times when architecting there is a gap between the high level overview and the actual implementation limitations that are learned during development.
 
+---
 
 ## Don't Repeat Yourself
 
@@ -42,6 +48,7 @@ This one is pretty cliche these days, but I think its a useful thing to keep in 
 
 It's important to reuse functionality. This way it can be extended and maintained in one place.
 
+---
 
 ## Separation of Concerns
 
@@ -53,6 +60,7 @@ If changing the database requires touching API route handlers, your concerns are
 
 Finding the right balance whether microservices vs monolith or code organization depends on team size and complexity. Start simple and split when you need to.
 
+---
 
 ## Environment Isolation
 
@@ -62,6 +70,7 @@ All of the environmental differences we have should be configurable. So we have 
 
 In the case of cloud environments we can store the configurations in the cloud environment and pull from there during run/build time. 
 
+---
 
 ## Automate Repetitive Tasks
 
@@ -81,6 +90,7 @@ If it becomes a repetitive task then we should automate it, like homework 4.
 
 This way we can kick off the script whenever we make changes or deploy, and can mostly be assured that the behaviour is the same.
 
+---
 
 ## Iterate and optimize over time
 
@@ -90,6 +100,7 @@ First we need to actually develop and deploy an MVP like application. From there
 
 It's important to collect good metrics like API calls, CPU usage, etc. From there we have a benchmark to compare iterations against.
 
+---
 
 ## Keep It Simple
 
@@ -98,6 +109,8 @@ Probably one of the most important to me.
 High complexity becomes so difficult to maintain and iterate on. It also becomes difficult for other developers to understand and maintain later.
 
 Developing low complexity applications can actually be difficult. I've found this especially true with AI. AI so often wants to implement the most complex solution possible. Understanding code and what you are doing helps immensely when guiding AI solutions.
+
+---
 
 
 # The Power of Frameworks
@@ -110,6 +123,7 @@ Frameworks solve common problems so we don't have to. Security, validation, rout
 
 Frameworks are great for enterprise applications that need security, validation, auth, etc.
 
+---
 
 ## FastAPI - Python Web Framework
 
@@ -137,6 +151,7 @@ async def create_agent(agent: Agent):
 - Async support for concurrent requests
 - Clear validation errors as JSON
 
+---
 
 ## OpenAI Python SDK - Client Library Design
 
@@ -161,6 +176,7 @@ response = client.chat.completions.create(
 
 This framework is everywhere and can be used with many models outside of openai's own.
 
+---
 
 ## FastMCP - MCP Server Framework
 
@@ -182,6 +198,7 @@ def search_records(query: str, limit: int = 10) -> str:
 
 This framework is awesome for standing up and building an mcp server.
 
+---
 
 ## Why Frameworks are Important
 
@@ -197,6 +214,7 @@ This framework is awesome for standing up and building an mcp server.
 
 **Velocity:** Ship features faster. Less boilerplate means more time on unique business logic.
 
+---
 
 ## Real-World Impact
 
@@ -206,7 +224,8 @@ OpenAI SDK handles rate limiting automatically. Implementing exponential backoff
 
 Frameworks are force multipliers. They handle solved problems correctly so you spend time on what makes your project unique.
 
-They give us the scaffolding we can build and iterate on for future development.# Testing and Quality Assurance
+They give us the scaffolding we can build and iterate on for future development.
+# Testing and Quality Assurance
 
 ### Why Testing Matters
 
@@ -218,6 +237,7 @@ Automated tests catch edge cases and errors after code changes.
 
 Integration tests are great and ensure that the entire app works end-to-end as expected. These can be integrated into your CICD pipelines to ensure apps function as expected prior to deploying.
 
+---
 
 ## Cost of Bugs
 
@@ -227,6 +247,7 @@ Integration tests are great and ensure that the entire app works end-to-end as e
 
 > Testing can prevent bugs from reaching produciton. Although it won't catch every edge case or environmental difference, it provides a good line of defense against bugs be introduced during initial deployment or further iterations.
 
+---
 
 ## Testing Approaches in my HW4
 
@@ -253,6 +274,7 @@ The infra cost of completely replicating PROD in lower environments can also be 
 
 All of that being said, ensuring data integrity, data quality, and testing apps integration is important. Ensuring that when the application is running in PROD that it isn't encountering unforeseen table locking, read/write issues is important, and can be tested for in the lower envs.
 
+---
 
 ### What Good Tests Cover
 
@@ -265,6 +287,8 @@ All of that being said, ensuring data integrity, data quality, and testing apps 
 **Security** - auth actually prevents unauthorized access, SQL injection attempts fail safely
 
 **Breaking Changes** - arguably the most important to me. Breaking changes being caught before being deployed to production is a big saver of time and prod issues.
+
+---
 
 # Documentation
 
@@ -282,6 +306,7 @@ Here is an example of something I've published to be publically available (can't
 
 [Example Documentation Published to Medium](https://medium.com/aws-tip/aws-sso-setup-with-organizations-for-terraform-cli-assumable-roles-922348c015bb)
 
+---
 
 ### Documentation as Code
 

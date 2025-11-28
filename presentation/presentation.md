@@ -39,7 +39,7 @@ Documentation saves time. Can someone new actually get this running without exte
 
 # This Documentation
 
-Throughout this documentation I use the [REST API PHP Server Project](https://github.com/jon-fox/rest-api-php-server-project) as an example along with other callouts from previous frameworks and docs I've written.
+Throughout this documentation I use the [REST API PHP Server Project](https://github.com/jon-fox/rest-api-php-server-project) as an example along with other callouts from previous frameworks and docs I've written. [Example Documentation Published to Medium](https://medium.com/aws-tip/aws-sso-setup-with-organizations-for-terraform-cli-assumable-roles-922348c015bb). This [Graduate MCP smart hub research project](https://github.com/jon-fox/raspberry-mcp).
 
 - **Documentation.md** - Documentation standards and practices
 - **Frameworks.md** - Power of frameworks with examples
